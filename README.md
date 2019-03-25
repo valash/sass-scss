@@ -1,8 +1,9 @@
-**Hello**
 
-SASS: syntactically awesome stylesheets
-its an extension of CSS.
-SCSS: Sassy Css
+**SASS:**
+*Syntactically Awesome Stylesheets*
+
+**SCSS**
+*Sassy CSS*
 
 **Why did you choose this subject?**
 
