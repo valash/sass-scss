@@ -5,25 +5,28 @@
 //mixins
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+//all variables
+
 $colors: (
 	primary: #ffcfcf,
 	primary-light: lighten(#ffcfcf, 40%),
-	primary-dark: darken(#ffcfcf, 40%),
+	primary-dark: darken(#ffcfcf, 10%),
 	accent: #fdf9db
 );
-
+$padding: 15px;
+$borders: 15px;
 $desktop: 850px;
+$middle: center;
+$upper: uppercase;
 
+//mixin
 @mixin desktop {
 	@media (min-width: #{$desktop}) {
 		@content;
 	}
 }
 
-$padding: 15px;
-
-$borders: 15px;
-
+//functions - map get
 @function color($colors-name) {
 	@return map-get($colors, $colors-name);
 }
@@ -65,7 +68,7 @@ body {
 		text-decoration: none;
 		padding: $padding;
 		display: block;
-		text-transform: uppercase;
+		text-transform: $upper;
 	}
 }
 
@@ -87,7 +90,7 @@ main {
 		@include desktop {
 			grid-area: card;
 			height: fit-content;
-			align-self: center;
+			align-self: $middle;
 			margin: 1em;
 		}
 
@@ -118,7 +121,7 @@ main {
 	section#primary {
 		color: white;
 		padding: $padding;
-		text-align: center;
+		text-align: $middle;
 
 		@include desktop {
 			grid-area: primary;
@@ -144,11 +147,11 @@ main {
 			color: color(primary-dark);
 			border-radius: $borders;
 			text-decoration: none;
-			text-transform: uppercase;
+			text-transform: $upper;
 			font-weight: bold;
 			background-color: color(accent);
 			display: block;
-			text-align: center;
+			text-align: $middle;
 			margin: 50px auto 0 auto;
 			padding: $padding;
 
