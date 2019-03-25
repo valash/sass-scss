@@ -2,7 +2,6 @@
 
 //functions let you instead of having map-get($colors, primary) every time you can set the function to call $colors every time without having to specify it again and again.
 
-//mixins
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 //all variables
@@ -11,14 +10,15 @@ $colors: (
 	primary: #ffcfcf,
 	primary-light: lighten(#ffcfcf, 40%),
 	primary-dark: darken(#ffcfcf, 10%),
-	accent: #fdf9db
+	accent: #ffffcf
 );
 $padding: 15px;
 $borders: 15px;
 $desktop: 850px;
 $middle: center;
 $upper: uppercase;
-$clip: polygon(100% 0, 100% 21%, 34% 100%, 0 100%, 0 0);
+$clip: polygon(100% 0, 100% 38%, 23% 100%, 0 100%, 0 0);
+$fontcolo: #cfb1b1;
 
 //mixin
 @mixin desktop {
@@ -43,7 +43,6 @@ body {
 
 	#bg {
 		clip-path: $clip;
-
 		background-color: color(primary);
 		width: 100%;
 		height: 100%;
@@ -55,7 +54,7 @@ body {
 		}
 	}
 	header a {
-		color: white;
+		color: $fontcolo;
 		text-decoration: none;
 		padding: $padding;
 		display: block;
@@ -72,6 +71,7 @@ main {
 
 	section#card {
 		background: white;
+		color: colors(primary-dark);
 		padding: 20px;
 		margin: 1em auto;
 		border-radius: $borders;
@@ -83,22 +83,22 @@ main {
 		animation-name: fade-in;
 		animation-fill-mode: both;
 		animation-duration: 1.5s;
-	}
-	$animationDelay: 1;
-	@for $i from 1 through 15 {
-		.card div:nth-of-type(#{$i}) {
-			animation-delay: #{0.3+ ($i)/30}s;
-		}
-	}
 
-	@keyframes fade-in {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
+		$animationDelay: 1;
+		@for $i from 1 through 15 {
+			.card div:nth-of-type(#{$i}) {
+				animation-delay: #{0.3+ ($i)/30}s;
+			}
 		}
 
+		@keyframes fade-in {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
 		@include desktop {
 			grid-area: card;
 			height: fit-content;
