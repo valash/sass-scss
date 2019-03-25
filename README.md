@@ -101,6 +101,7 @@ Extremely similar to CSS
 Hampton Caitlin and Natalie Weizenbaum were the creators of Sass. They built the preprocessor scripting language to be an extension of CSS to "make CSS fun again."
 
 **Who is maintaining it?**
+
 Natalie Weizenbaum is now the primary developer and architect of Sass. Hampton Caitlin no longer works with Sass. Natalie is currently leading a team that keeps Sass updated and current.
 
 **What is your opinion on the technology after having built something with it?**
