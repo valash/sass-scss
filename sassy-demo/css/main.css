@@ -10,8 +10,8 @@ body {
 }
 
 body #bg {
-  -webkit-clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
-          clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 21%, 34% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 21%, 34% 100%, 0 100%, 0 0);
   background-color: #ffcfcf;
   width: 100%;
   height: 100%;
@@ -21,8 +21,8 @@ body #bg {
 
 @media (min-width: 850px) {
   body #bg {
-    -webkit-clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
-            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+    -webkit-clip-path: polygon(100% 0, 100% 21%, 34% 100%, 0 100%, 0 0);
+            clip-path: polygon(100% 0, 100% 21%, 34% 100%, 0 100%, 0 0);
   }
 }
 
@@ -52,10 +52,137 @@ main section#card {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 80%;
+  margin: auto;
+  height: 30%;
+  background-color: color, primary;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
-@media (min-width: 850px) {
-  main section#card {
+main .card div:nth-of-type(1) {
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
+}
+
+main .card div:nth-of-type(2) {
+  -webkit-animation-delay: 0.36667s;
+          animation-delay: 0.36667s;
+}
+
+main .card div:nth-of-type(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+main .card div:nth-of-type(4) {
+  -webkit-animation-delay: 0.43333s;
+          animation-delay: 0.43333s;
+}
+
+main .card div:nth-of-type(5) {
+  -webkit-animation-delay: 0.46667s;
+          animation-delay: 0.46667s;
+}
+
+main .card div:nth-of-type(6) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+main .card div:nth-of-type(7) {
+  -webkit-animation-delay: 0.53333s;
+          animation-delay: 0.53333s;
+}
+
+main .card div:nth-of-type(8) {
+  -webkit-animation-delay: 0.56667s;
+          animation-delay: 0.56667s;
+}
+
+main .card div:nth-of-type(9) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+main .card div:nth-of-type(10) {
+  -webkit-animation-delay: 0.63333s;
+          animation-delay: 0.63333s;
+}
+
+main .card div:nth-of-type(11) {
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
+}
+
+main .card div:nth-of-type(12) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+main .card div:nth-of-type(13) {
+  -webkit-animation-delay: 0.73333s;
+          animation-delay: 0.73333s;
+}
+
+main .card div:nth-of-type(14) {
+  -webkit-animation-delay: 0.76667s;
+          animation-delay: 0.76667s;
+}
+
+main .card div:nth-of-type(15) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  @media (min-width: 850px) {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: fit-content;
+    align-self: center;
+    margin: 1em;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+      span {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      strong {
+        display: inline-block;
+        margin-left: 40px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  @media (min-width: 850px) {
     grid-area: card;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -65,31 +192,27 @@ main section#card {
         align-self: center;
     margin: 1em;
   }
-}
-
-main section#card ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-main section#card ul li {
-  margin-bottom: 10px;
-}
-
-main section#card ul li span {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-main section#card ul li strong {
-  display: inline-block;
-  margin-left: 40px;
-  margin-top: 10px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+      span {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      strong {
+        display: inline-block;
+        margin-left: 40px;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 main section#primary {
