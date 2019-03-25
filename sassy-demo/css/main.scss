@@ -14,7 +14,7 @@ $colors: (
 );
 $padding: 15px;
 $borders: 15px;
-$desktop: 850px;
+$desktop: 750px;
 $middle: center;
 $upper: uppercase;
 $clip: polygon(100% 0, 100% 38%, 23% 100%, 0 100%, 0 0);
@@ -54,7 +54,7 @@ body {
 		}
 	}
 	header a {
-		color: $fontcolo;
+		color: white;
 		text-decoration: none;
 		padding: $padding;
 		display: block;
@@ -71,7 +71,7 @@ main {
 
 	section#card {
 		background: white;
-		color: colors(primary-dark);
+		color: $fontcolo;
 		padding: 20px;
 		margin: 1em auto;
 		border-radius: $borders;
