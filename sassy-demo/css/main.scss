@@ -18,7 +18,7 @@ $desktop: 750px;
 $middle: center;
 $upper: uppercase;
 $clip: polygon(100% 0, 100% 38%, 23% 100%, 0 100%, 0 0);
-$fontcolo: #cfb1b1;
+$fontColo: #9f8181;
 
 //mixin
 @mixin desktop {
@@ -71,7 +71,7 @@ main {
 
 	section#card {
 		background: white;
-		color: $fontcolo;
+		color: $fontColo;
 		padding: 20px;
 		margin: 1em auto;
 		border-radius: $borders;
